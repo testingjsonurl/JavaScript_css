@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of Two Numbers</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .my-button {
+            background-color: #007BFF; /* Blue background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 10px 20px; /* Some padding */
+            font-size: 16px; /* Increase font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        .my-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function addNumbers() {
+            // Get the input values
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            // Calculate the sum
+            const sum = num1 + num2;
+            // Display the result
+            document.getElementById("result").innerText = "Sum: " + sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+    <input type="number" id="number1" placeholder="Enter first number" required>
+    <input type="number" id="number2" placeholder="Enter second number" required>
+    <button class="my-button" onclick="addNumbers()">Add</button>
+    <div class="result" id="result"></div>
+</body>
+</html>
